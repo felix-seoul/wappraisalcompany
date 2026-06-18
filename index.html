@@ -71,16 +71,15 @@
       <a href="#company">W 소개</a>
       <a href="#services">업무분야</a>
       <a href="#fees">수수료</a>
-      <a href="#required-documents">필요서류</a>
       <a href="#inquiry">FAQ</a>
       <a href="#case-studies">사례</a>
     </nav>
     <div style="display:flex;align-items:center;gap:10px;">
       <div class="lang-switcher">
-        <span class="lang-btn current">KR</span>
-        <a href="#main" class="lang-btn">EN</a>
+        <button type="button" class="lang-btn current" data-lang="ko">KR</button>
+        <button type="button" class="lang-btn" data-lang="en">EN</button>
       </div>
-      <a href="#inquiry" class="header-cta">프라이빗 상담 →</a>
+      <a href="http://pf.kakao.com/_dBrxbX/chat" target="_blank" rel="noopener" class="header-cta">프라이빗 상담 →</a>
     </div>
     <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="메뉴 열기" aria-expanded="false">
       <span></span><span></span><span></span>
@@ -91,11 +90,10 @@
   <a href="#company">W 소개</a>
   <a href="#services">업무분야</a>
   <a href="#fees">수수료 안내</a>
-  <a href="#required-documents">필요서류</a>
   <a href="#inquiry">자주 묻는 질문</a>
   <a href="#case-studies">감정평가 사례</a>
-  <a href="#inquiry">문의하기</a>
-  <a href="#main">English</a>
+  <a href="http://pf.kakao.com/_dBrxbX/chat" target="_blank" rel="noopener">문의하기</a>
+  <a href="#main" data-mobile-lang="en">English</a>
 </nav>
 
 <main id="main">
@@ -108,12 +106,12 @@
         <h1 class="hero-h1">한국 부동산의 가치를<br>신뢰 있게 평가합니다</h1>
         <p class="hero-sub">W 감정평가사무소는 국내외 고객을 위한 독립 감정평가와 전문 자문 서비스를 제공합니다. 대표 감정평가사가 직접 수행합니다.</p>
         <div class="hero-btns">
-          <a href="#inquiry" class="btn-primary">프라이빗 상담 신청 →</a>
+          <a href="http://pf.kakao.com/_dBrxbX/chat" target="_blank" rel="noopener" class="btn-primary">프라이빗 상담 신청 →</a>
           <a href="#services" class="btn-secondary">업무분야 보기</a>
         </div>
       </div>
-      <div class="hero-visual" aria-hidden="true">
-        <div class="hero-grid"></div>
+      <div class="hero-visual">
+        <img src="assets/office-building.jpg" alt="서울 강남구 테헤란로 사무실 인근 빌딩 전경" class="hero-photo">
         <div class="hero-w">W</div>
         <div class="hero-caption">서울특별시 강남구 테헤란로 410, 4층</div>
       </div>
@@ -245,6 +243,7 @@
           <div class="eyebrow">Fee Calculator</div>
           <h2 class="section-title">감정평가 수수료를<br>간단히 가늠해보세요</h2>
           <p class="section-sub">평가액 기준의 참고용 계산기입니다. 평가 목적, 물건 종류, 난이도, 출장 여부 등에 따라 실제 견적은 달라질 수 있습니다.</p>
+          <p class="fee-source-note"><a href="https://www.law.go.kr/LSW/admRulLsInfoP.do?admRulNm=%EA%B0%90%EC%A0%95%ED%8F%89%EA%B0%80%EB%B2%95%EC%9D%B8%EB%93%B1%EC%9D%98%20%EB%B3%B4%EC%88%98%EC%97%90%20%EA%B4%80%ED%95%9C%20%EA%B8%B0%EC%A4%80" target="_blank" rel="noopener">감정평가법인등의 보수에 관한 기준</a>의 기본수수료표를 기준으로 계산합니다.</p>
         </div>
         <div class="fee-calculator-card">
           <div class="fee-input-row">
@@ -276,47 +275,6 @@
           </dl>
           <p class="fee-disclaimer">본 계산 결과는 상담 전 참고용이며, 공식 견적 또는 청구 금액이 아닙니다.</p>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── PROCESS ── -->
-  <section class="section-alt" id="required-documents">
-    <div class="container">
-      <div style="text-align:center;margin-bottom:48px;">
-        <div class="eyebrow" style="justify-content:center;">Process</div>
-        <h2 class="section-title">상담부터 가치의견 제시까지</h2>
-        <p class="section-sub">평가 목적에 맞는 절차로 진행합니다.</p>
-      </div>
-      <div class="process-steps">
-        <div class="process-step">
-          <div class="ps-circle active">01</div>
-          <div class="ps-name">상담</div>
-          <div class="ps-desc">평가 목적과 대상 부동산·필요자료 확인</div>
-        </div>
-        <div class="process-step">
-          <div class="ps-circle">02</div>
-          <div class="ps-name">자료검토</div>
-          <div class="ps-desc">등기·건축물대장·임대자료·재무자료 검토</div>
-        </div>
-        <div class="process-step">
-          <div class="ps-circle">03</div>
-          <div class="ps-name">현장조사</div>
-          <div class="ps-desc">위치·이용상황·물리적 현황 확인</div>
-        </div>
-        <div class="process-step">
-          <div class="ps-circle">04</div>
-          <div class="ps-name">분석</div>
-          <div class="ps-desc">시장자료·평가 방법론 적용 및 가치 분석</div>
-        </div>
-        <div class="process-step">
-          <div class="ps-circle">05</div>
-          <div class="ps-name">가치의견</div>
-          <div class="ps-desc">감정평가사의 전문적 판단으로 최종 보고서 발급</div>
-        </div>
-      </div>
-      <div style="text-align:center;margin-top:40px;">
-        <a href="#required-documents" class="btn-secondary">필요서류 확인하기 →</a>
       </div>
     </div>
   </section>
@@ -354,7 +312,7 @@
             </div>
             <div class="pc-stat">
               <div class="pc-stat-num">₩701조</div>
-              <div class="pc-stat-label">개사 전 누적 자문·평가 규모 (2010–2020)</div>
+              <div class="pc-stat-label">누적 자문·평가 규모 (2010–현재)</div>
             </div>
           </div>
         </div>
@@ -527,10 +485,10 @@
           <svg viewBox="0 0 24 24" fill="currentColor" width="18" height="18">
             <path d="M12 3C6.477 3 2 6.477 2 10.5c0 2.657 1.685 4.99 4.217 6.395L5 21l5.024-2.653A11.8 11.8 0 0012 18.5c5.523 0 10-3.477 10-7.5S17.523 3 12 3z"/>
           </svg>
-          카카오로 바로 상담하기
+          <span>카카오로 바로 상담하기</span>
         </a>
 
-        <p style="font-size:12px;color:rgba(247,244,238,.3);margin-bottom:32px;">또는 아래 양식으로 문의하시면 이메일/전화로 회신드립니다.</p>
+        <p style="font-size:12px;color:rgba(247,244,238,.3);margin-bottom:32px;">아래 상담 신청 버튼도 카카오 채널로 연결됩니다.</p>
 
         <div style="background:rgba(255,255,255,.05);border:1px solid rgba(184,154,100,.15);border-radius:var(--radius-md);padding:20px 22px;">
           <p style="font-size:12px;color:rgba(247,244,238,.35);line-height:1.8;margin:0;">
@@ -581,7 +539,7 @@
               <label for="message">추가 문의사항</label>
               <textarea id="message" name="message" rows="3" placeholder="평가 목적, 일정 등 추가로 알려주실 내용이 있으면 기재해주세요."></textarea>
             </div>
-            <button type="submit" class="form-submit">상담 신청하기</button>
+            <button type="button" class="form-submit" data-kakao-link>상담 신청하기</button>
             <p class="form-note">🔒 모든 문의는 비공개로 처리됩니다. 영업일 기준 1일 이내 회신드립니다.</p>
           </form>
           <!-- 성공 메시지 -->
@@ -631,11 +589,10 @@
           <li><a href="#company">W 소개</a></li>
           <li><a href="#company">대표 감정평가사</a></li>
           <li><a href="#fees">수수료 안내</a></li>
-          <li><a href="#required-documents">필요서류 안내</a></li>
           <li><a href="#inquiry">자주 묻는 질문</a></li>
           <li><a href="#case-studies">감정평가 사례</a></li>
-          <li><a href="#inquiry">문의하기</a></li>
-          <li><a href="#main">English</a></li>
+          <li><a href="http://pf.kakao.com/_dBrxbX/chat" target="_blank" rel="noopener">문의하기</a></li>
+          <li><a href="#main" data-footer-lang="en">English</a></li>
         </ul>
       </div>
     </div>
@@ -657,12 +614,12 @@
 
     <div class="eyebrow" style="color:var(--gold);margin-bottom:10px;">Track Record</div>
     <h2 id="modal-title" style="font-size:clamp(20px,3vw,28px);color:var(--cream);font-weight:700;margin-bottom:6px;">주요 평가·자문 실적</h2>
-    <p style="font-size:12.5px;color:rgba(247,244,238,.4);margin-bottom:28px;line-height:1.6;">W 감정평가사무소 개사 전(2010–2020) 누적 실적 기준 · 고객명·자산명은 비공개 처리됩니다.</p>
+    <p style="font-size:12.5px;color:rgba(247,244,238,.4);margin-bottom:28px;line-height:1.6;">2010년부터 현재까지의 누적 실적 기준 · 고객명·자산명은 비공개 처리됩니다.</p>
 
     <div class="modal-stats">
       <div class="modal-stat"><div class="modal-stat-num">₩701조+</div><div class="modal-stat-label">누적 평가·자문 규모</div></div>
       <div class="modal-stat"><div class="modal-stat-num">116건+</div><div class="modal-stat-label">주요 프로젝트</div></div>
-      <div class="modal-stat"><div class="modal-stat-num">2010–2020</div><div class="modal-stat-label">실적 기간</div></div>
+      <div class="modal-stat"><div class="modal-stat-num">2010–현재</div><div class="modal-stat-label">실적 기간</div></div>
       <div class="modal-stat"><div class="modal-stat-num">글로벌</div><div class="modal-stat-label">국내외 기관 클라이언트</div></div>
     </div>
 
