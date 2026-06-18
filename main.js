@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initModal();
   initScrollAnimations();
   initCounterAnimation();
+  initFeeCalculator();
   initFilterTabs();
   initRipple();
 });
@@ -226,6 +227,82 @@ function animateCount(el, from, to, duration) {
     else el.textContent = originalText;
   }
   requestAnimationFrame(step);
+}
+
+/* ─── FEE CALCULATOR ─── */
+function initFeeCalculator() {
+  const input = document.getElementById('appraisal-amount');
+  const baseEl = document.getElementById('fee-base');
+  const vatEl = document.getElementById('fee-vat');
+  const totalEl = document.getElementById('fee-total');
+  const presetButtons = document.querySelectorAll('.fee-presets button');
+  if (!input || !baseEl || !vatEl || !totalEl) return;
+
+  const formatter = new Intl.NumberFormat('ko-KR');
+
+  function formatWon(value) {
+    return `${formatter.format(Math.round(value))}원`;
+  }
+
+  function parseAmount(value) {
+    return Number(String(value).replace(/[^\d]/g, '')) || 0;
+  }
+
+  function calculateAppraisalFee(amount) {
+    // 가정 1: 이 계산기는 상담 전 참고용이며, 실제 견적·계약·청구 금액을 확정하지 않습니다.
+    // 가정 2: 복잡한 권리관계, 특수물건, 복수 필지, 지방 출장, 영문 보고서 등 추가 업무는 별도 협의 대상으로 둡니다.
+    // 가정 3: 아래 구간별 요율은 사이트 내 간편 시뮬레이션을 위한 보수적 예시이며, 법정 수수료표 변경 시 조정될 수 있습니다.
+    // 가정 4: 최저 기준 수수료를 300,000원으로 두고, 부가가치세는 기준 수수료의 10%로 별도 표시합니다.
+    const brackets = [
+      { upTo: 500000000, rate: 0.0011 },
+      { upTo: 1000000000, rate: 0.0009 },
+      { upTo: 5000000000, rate: 0.0007 },
+      { upTo: 10000000000, rate: 0.0005 },
+      { upTo: Infinity, rate: 0.00035 },
+    ];
+    let remaining = amount;
+    let floor = 0;
+    let fee = 0;
+
+    for (const bracket of brackets) {
+      const taxable = Math.min(remaining, bracket.upTo - floor);
+      if (taxable <= 0) break;
+      fee += taxable * bracket.rate;
+      remaining -= taxable;
+      floor = bracket.upTo;
+    }
+
+    return Math.max(fee, 300000);
+  }
+
+  function renderFee() {
+    const amount = parseAmount(input.value);
+    input.value = amount ? formatter.format(amount) : '';
+    presetButtons.forEach(button => {
+      button.classList.toggle('active', Number(button.dataset.amount) === amount);
+    });
+
+    if (!amount) {
+      baseEl.textContent = '-';
+      vatEl.textContent = '-';
+      totalEl.textContent = '-';
+      return;
+    }
+
+    const baseFee = calculateAppraisalFee(amount);
+    const vat = baseFee * 0.1;
+    baseEl.textContent = formatWon(baseFee);
+    vatEl.textContent = formatWon(vat);
+    totalEl.textContent = formatWon(baseFee + vat);
+  }
+
+  input.addEventListener('input', renderFee);
+  presetButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      input.value = button.dataset.amount;
+      renderFee();
+    });
+  });
 }
 
 /* ─── RIPPLE EFFECT ─── */

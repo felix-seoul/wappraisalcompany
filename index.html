@@ -23,7 +23,7 @@
     "taxID": "522-05-02459",
     "address": {
       "@type": "PostalAddress",
-      "streetAddress": "테헤란로 410, 1502호 (금강타워)",
+      "streetAddress": "테헤란로 410, 4층",
       "addressLocality": "서울특별시 강남구",
       "addressRegion": "서울",
       "postalCode": "06193",
@@ -115,7 +115,7 @@
       <div class="hero-visual" aria-hidden="true">
         <div class="hero-grid"></div>
         <div class="hero-w">W</div>
-        <div class="hero-caption">서울특별시 강남구 테헤란로 · 금강타워</div>
+        <div class="hero-caption">서울특별시 강남구 테헤란로 410, 4층</div>
       </div>
     </div>
   </section>
@@ -237,6 +237,49 @@
     </div>
   </section>
 
+  <!-- ── FEE CALCULATOR ── -->
+  <section class="section fee-calculator-section" id="fee-calculator">
+    <div class="container">
+      <div class="fee-calculator-grid">
+        <div>
+          <div class="eyebrow">Fee Calculator</div>
+          <h2 class="section-title">감정평가 수수료를<br>간단히 가늠해보세요</h2>
+          <p class="section-sub">평가액 기준의 참고용 계산기입니다. 평가 목적, 물건 종류, 난이도, 출장 여부 등에 따라 실제 견적은 달라질 수 있습니다.</p>
+        </div>
+        <div class="fee-calculator-card">
+          <div class="fee-input-row">
+            <label for="appraisal-amount">예상 평가액</label>
+            <div class="fee-input-wrap">
+              <input type="text" id="appraisal-amount" inputmode="numeric" placeholder="예) 1,000,000,000">
+              <span>원</span>
+            </div>
+          </div>
+          <div class="fee-presets" aria-label="예상 평가액 빠른 선택">
+            <button type="button" data-amount="500000000">5억</button>
+            <button type="button" data-amount="1000000000">10억</button>
+            <button type="button" data-amount="3000000000">30억</button>
+            <button type="button" data-amount="10000000000">100억</button>
+          </div>
+          <dl class="fee-result">
+            <div>
+              <dt>기준 수수료</dt>
+              <dd id="fee-base">-</dd>
+            </div>
+            <div>
+              <dt>부가가치세</dt>
+              <dd id="fee-vat">-</dd>
+            </div>
+            <div class="fee-result-total">
+              <dt>예상 합계</dt>
+              <dd id="fee-total">-</dd>
+            </div>
+          </dl>
+          <p class="fee-disclaimer">본 계산 결과는 상담 전 참고용이며, 공식 견적 또는 청구 금액이 아닙니다.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ── PROCESS ── -->
   <section class="section-alt" id="required-documents">
     <div class="container">
@@ -285,7 +328,7 @@
         <div>
           <div class="principal-card">
             <div class="pc-head">
-              <div class="pc-avatar">이</div>
+              <img class="pc-avatar pc-photo" src="assets/lee-jisoo-profile.jpg" alt="이지수 대표 감정평가사 프로필 사진">
               <div>
                 <div class="pc-name">이지수</div>
                 <div class="pc-title">대표 감정평가사 · 자격번호 제3280호</div>
@@ -302,7 +345,7 @@
               </div>
               <div class="pc-row">
                 <span class="pc-label">소재지</span>
-                <span class="pc-value" style="text-align:right;">서울 강남구<br>테헤란로 410 금강타워</span>
+                <span class="pc-value" style="text-align:right;">서울 강남구<br>테헤란로 410, 4층</span>
               </div>
               <div class="pc-row">
                 <span class="pc-label">대응 언어</span>
@@ -492,8 +535,7 @@
         <div style="background:rgba(255,255,255,.05);border:1px solid rgba(184,154,100,.15);border-radius:var(--radius-md);padding:20px 22px;">
           <p style="font-size:12px;color:rgba(247,244,238,.35);line-height:1.8;margin:0;">
             <strong style="color:rgba(247,244,238,.55);display:block;margin-bottom:6px;">📍 오시는 길</strong>
-            서울특별시 강남구 테헤란로 410<br>
-            금강타워 1502호<br>
+            서울특별시 강남구 테헤란로 410, 4층<br>
             <small style="color:rgba(247,244,238,.25);">지하철 수인분당선 선릉역 1번 출구 도보 1분</small>
           </p>
         </div>
@@ -565,7 +607,7 @@
           <span class="footer-logo-kr">W 감정평가사무소</span>
         </div>
         <p class="footer-desc">
-          서울특별시 강남구 테헤란로 410, 1502호 (금강타워)<br>
+          서울특별시 강남구 테헤란로 410, 4층<br>
           사업자등록번호: 522-05-02459<br>
           대표 감정평가사: 이지수 (자격번호 제3280호)<br>
           개설일: 2022년 8월 16일<br>
